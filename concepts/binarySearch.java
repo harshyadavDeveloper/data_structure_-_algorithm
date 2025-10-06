@@ -1,9 +1,10 @@
+// package concepts;
 // on works on sorted arrays
+
 // it always return the index of the target element if found
 // otherwise it returns -1
 // time complexity O(log n)
 // space complexity O(1)
-package concepts;
 
 public class binarySearch {
     public static void main(String[] args) {
