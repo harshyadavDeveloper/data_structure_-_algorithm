@@ -1,6 +1,6 @@
 // Palindrome meaning : A palindrome means the sequence of characters remains the same when reversed.
 
-public class Palindrome {
+class Palindrome {
     public static void main(String[] args) {
         String str = "racecar";
         System.out.println(isPalindrome(str));
