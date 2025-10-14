@@ -17,7 +17,13 @@
 //                        - Now words = ["abba","cd"].
 //                        - We can no longer perform any operations. Thus, the resultant array is ["abba","cd"].
 
-// approach: 
+// approach: 1. create a helper to check if two strings are anagram or not
+//           2. initialize variable curr to 1 and prev to 0 and a result list to store the resultant array
+//           3. add the first word from words array to the result list bacause the first word will always be present in the result array.(we r reoving the i + 1 duplicate anagram)             
+//           4. start a while loop until curr is less than the length of words array
+//              a. if the words at index prev and curr are not anagram add the word at index curr to the result list and update prev to curr
+//              b. increment curr by 1
+//           5. finally return the result list
 
 import java.util.ArrayList;
 import java.util.Arrays;
