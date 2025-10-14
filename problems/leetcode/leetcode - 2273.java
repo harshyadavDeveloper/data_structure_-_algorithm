@@ -25,6 +25,9 @@
 //              b. increment curr by 1
 //           5. finally return the result list
 
+// time complexity : O(n * m log m) where n is the length of words array and m is the average length of each word
+// space complexity : O(n) for the result list
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
