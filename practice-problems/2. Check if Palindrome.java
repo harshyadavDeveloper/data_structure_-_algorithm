@@ -40,5 +40,12 @@ class Solution {
         }
         return true;
     }
+
+    // Edge cases:
+    // 1. empty string --> true
+    // 2. single character --> true
+    // 3. two charactres:
+        // *) same --> true
+        // *) different --> false
     
 }
