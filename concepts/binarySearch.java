@@ -1,5 +1,5 @@
 // package concepts;
-// on works on sorted arrays
+//  works on sorted arrays
 
 // it always return the index of the target element if found
 // otherwise it returns -1
