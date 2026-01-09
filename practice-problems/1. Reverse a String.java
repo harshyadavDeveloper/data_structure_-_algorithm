@@ -1,7 +1,7 @@
 // reverse a string
 
 // 2 approaches:
-// (thinking process) : create a new array -> copy element from original array to new array in reverse order -> copy new array to original array
+// (thinking process) : create a new char array of the same length as original -> copy element from original array to new array in reverse order -> copy new array to original array
 // 1. brute force approach: create a new array of same length as s -> traverse the s array from end to start and fill the new array from start to end -> finally move all the elements of temp array to the original array s.
 // time complexity : O(n)
 // space complexity : O(n) (extra space for temp array)
@@ -23,6 +23,20 @@ class Solution {
 
         for (int i = 0; i < n; i++) {
             s[i] = temp[i];
+        }
+    }
+
+    public void reverStringWithTwoPointers(char[] s){
+        int start = 0;
+        int end = s.length - 1;
+
+        while(start < end){
+            char temp = s[start];
+            s[start] = s[end];
+            s[end] = temp;
+
+            start++;
+            end--;
         }
     }
 
