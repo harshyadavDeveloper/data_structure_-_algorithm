@@ -27,7 +27,12 @@
 
 // approach 1 : convert the int into a string and then introduce a new char[] to store the reversed string and return true or false based on the comparison. problem -> uses extra space
 
-// approach 2: covert the int into a String -> start a binary search and move inwards -> return true or false based on the comparios
+// approach 2: covert the int into a String -> start a binary search and move inwards -> return true or false based on the comparison
+
+// approach 3: Store the original number 
+// → Reverse the number using modulo and division 
+// → Compare reversed number with original 
+// → Return true if equal, else false
 
 class Solution {
     public boolean isPalindrome(int x) {
@@ -58,6 +63,22 @@ class Solution {
         }
 
         return true;
+    }
+
+    public boolean isPlaindrome(int x) {
+        int temp = x;
+        int rev = 0;
+
+        while (x > 0) {
+            int digit = x % 10;
+            rev = (rev * 10) + digit;
+            x = x / 10;
+        }
+
+        if (rev == temp) {
+            return true;
+        }
+        return false;
     }
 
 }
