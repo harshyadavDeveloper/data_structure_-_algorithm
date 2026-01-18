@@ -27,7 +27,7 @@
 
 // approach 1 : convert the int into a string and then introduce a new char[] to store the reversed string and return true or false based on the comparison. problem -> uses extra space
 
-// approach 2: 
+// approach 2: covert the int into a String -> start a binary search and move inwards -> return true or false based on the comparios
 
 class Solution {
     public boolean isPalindrome(int x) {
@@ -42,6 +42,20 @@ class Solution {
         String reversedString = new String(temp);
 
         return s.equals(reversedString);
+    }
+
+    public boolean isPalindromeWithBinarySearch(int x) {
+        String s = String.valueOf(x);
+        int start = 0;
+        int end = s.length() - 1;
+
+        while (start < end) {
+            if (s.charAt(start) != s.charAt(end)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }
