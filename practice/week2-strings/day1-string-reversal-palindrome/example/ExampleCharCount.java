@@ -17,6 +17,8 @@ class Main{
     //     }
     // }
 
+    // THIS FOR PRACTICE NOTHING ELSE   
+
     public static void main(String[] args){
         String word = "hello";
         int[] freq = new int[26];
