@@ -34,19 +34,17 @@
 // time complexity : O(n)
 // space complexity : O(n)
 
-
-
 import java.util.HashMap;
 
 class Solution {
-    public int firstUniqChar(String s){
+    public int firstUniqChar(String s) {
         HashMap<Character, Integer> seen = new HashMap<>();
 
-        for(char a : s.toCharArray()){
+        for (char a : s.toCharArray()) {
             seen.put(a, seen.getOrDefault(a, 0) + 1);
         }
-        for(int i = 0; i < s.length(); i++){
-            if(seen.get(s.charAt(i)) == 1){
+        for (int i = 0; i < s.length(); i++) {
+            if (seen.get(s.charAt(i)) == 1) {
                 return i;
             }
         }

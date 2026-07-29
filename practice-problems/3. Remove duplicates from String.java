@@ -49,13 +49,13 @@ class Solution {
     }
 
     // approach 2: using hashset
-    public static String removeDuplicatesWithHashSet(String s){
+    public static String removeDuplicatesWithHashSet(String s) {
         HashSet<Character> seen = new HashSet<>();
 
         StringBuilder result = new StringBuilder();
-        
-        for(char c : s.toCharArray()){
-            if(!seen.contains(c)){
+
+        for (char c : s.toCharArray()) {
+            if (!seen.contains(c)) {
                 seen.add(c);
                 result.append(c);
             }

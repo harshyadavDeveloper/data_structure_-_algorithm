@@ -60,7 +60,8 @@ class Main {
 
         System.out.println("It is a Palindrome");
         return true;
-        /// this approach is much better because here we compare directly the char the place instead of creating a new string
-        //  adding char in it and then comparing
+        /// this approach is much better because here we compare directly the char the
+        /// place instead of creating a new string
+        // adding char in it and then comparing
     }
 }

@@ -26,11 +26,11 @@ class Solution {
         }
     }
 
-    public void reverStringWithTwoPointers(char[] s){
+    public void reverStringWithTwoPointers(char[] s) {
         int start = 0;
         int end = s.length - 1;
 
-        while(start < end){
+        while (start < end) {
             char temp = s[start];
             s[start] = s[end];
             s[end] = temp;
@@ -40,9 +40,9 @@ class Solution {
         }
     }
 
-    // Edge case to remember : 
+    // Edge case to remember :
     // 1. empty array : s = [] --> no action
-    // 2. single character array: s = ['a'] --> already reversed 
+    // 2. single character array: s = ['a'] --> already reversed
     // 3. array with all same characters: s = ['a', 'a', 'a'] --> already reversed
     // 4. even and odd lengths both handled naturally by the two pointer approach.
 
