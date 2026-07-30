@@ -4,15 +4,20 @@ class Main{
     public static void main(String[] args){
         String word1 = "hello";
         String word2 = "world";
-        boolean check = isPalindrome(word1, word2);
-        System.out.println(check);
+
+        String word3 = "silent";
+        String word4 = "listen";
+        boolean check1 = isAnagram(word1, word2);
+        boolean check2 = isAnagram(word3, word4);
+        System.out.println(check1);
+        System.out.println(check2);
 
     }
 
-    public static boolean isPalindrome(String word1, String word2){
+    public static boolean isAnagram(String word1, String word2){
 
         if(word1.length() != word2.length()){
-            System.out.println("Not a palindrome");
+            System.out.println("Not a anagram");
             return false;
         }else{
             int[] freq1 = new int[26];
