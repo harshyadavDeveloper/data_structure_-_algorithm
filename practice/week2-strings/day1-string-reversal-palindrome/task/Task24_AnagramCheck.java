@@ -2,10 +2,14 @@
 
 class Main{
     public static void main(String[] args){
+        String word1 = "hello";
+        String word2 = "world";
+        boolean check = isPalindrome(word1, word2);
+        System.out.println(check);
 
     }
 
-    boolean isPalindrome(String word1, String word2){
+    public static boolean isPalindrome(String word1, String word2){
 
         if(word1.length() != word2.length()){
             System.out.println("Not a palindrome");
