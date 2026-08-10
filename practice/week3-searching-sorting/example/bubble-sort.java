@@ -13,7 +13,7 @@ class Main {
             }
         }
 
-        for(int num: arr){
+        for (int num : arr) {
             System.out.println(num);
         }
     }
