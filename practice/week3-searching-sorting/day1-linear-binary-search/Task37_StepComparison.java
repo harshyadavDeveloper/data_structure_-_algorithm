@@ -2,8 +2,8 @@
 // using both linear and binary search on the same sorted 10-element array, and print both comparison counts side by side. Confirm
 // binary search takes meaningfully fewer steps.
 
-class Main{
-    public static void main(String[] args){
+class Main {
+    public static void main(String[] args) {
         linearSearch();
         binarySearch();
 
@@ -36,9 +36,9 @@ class Main{
             System.out.println("Provided target is not present");
         }
 
-    } 
+    }
 
-     public static void linearSearch() {
+    public static void linearSearch() {
         int[] arr = { 2, 5, 8, 12, 16, 23, 38, 45, 56, 72 };
         int target = 56;
         int count = 0;
@@ -49,7 +49,7 @@ class Main{
                 System.out.println("Found target at index: " + i);
                 System.out.println("Total counts: " + count);
                 break;
-                
+
             }
         }
     }

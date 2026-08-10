@@ -14,7 +14,7 @@ class Main {
                 System.out.println("Found target at index: " + i);
                 System.out.println("Total counts: " + count);
                 break;
-                
+
             }
         }
     }
