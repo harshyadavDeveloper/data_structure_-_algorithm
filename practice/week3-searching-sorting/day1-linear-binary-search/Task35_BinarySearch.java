@@ -24,7 +24,7 @@ class Main {
                 break;
             } else if (arr[mid] < target) {
                 left = mid + 1;
-            } else if (arr[mid] > target) {
+            } else if (arr[mid] > target) { // not required this condition simply put it in else
                 right = mid - 1;
             }
         }
