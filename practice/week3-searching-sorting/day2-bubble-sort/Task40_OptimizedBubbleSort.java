@@ -6,8 +6,30 @@
 // is already sorted — no further passes can possibly help). Test this on the near-sorted array above and confirm it exits early 
 // rather than grinding through all remaining passes needlessly.
 
-class Main{
-    public static void main(String[] args){
+class Main {
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3, 5, 4, 6 };
+        int n = arr.length;
+
+        for (int pass = 0; pass < n - 1; pass++) {
+            boolean swapped = false;
+            System.out.println("Pass " + pass);
+            for (int i = 0; i < n - 1 - pass; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    int temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                    swapped = true;
+                }
+
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
 
     }
 }
