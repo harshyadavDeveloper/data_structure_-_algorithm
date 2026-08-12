@@ -77,9 +77,10 @@ class Main {
         return b;
     }
 
-    public static int myAbs(int x){
-        /// 1. this is not just about flipping the sign it tell us how far is the number from 0
-        if(x<0){
+    public static int myAbs(int x) {
+        /// 1. this is not just about flipping the sign it tell us how far is the number
+        /// from 0
+        if (x < 0) {
             return -x;
         }
         return x;
