@@ -1,6 +1,7 @@
 class Main {
     public static void main(String[] args) {
-        bubbleSort();
+        // bubbleSort();
+        descSelectionSort();
 
     }
 
@@ -54,7 +55,29 @@ class Main {
         return foundIndex;
     }
 
-    // Task: 2 Implement selection sort, but modify it to find the maximum each pass instead of the minimum, 
+    // Task: 2 Implement selection sort, but modify it to find the maximum each pass
+    // instead of the minimum,
     // building the sorted array in descending order.
+    public static void descSelectionSort() {
+        int[] arr = { 7, 2, 9, 4, 1, 8 };
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            int swapIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] > arr[swapIndex]) {
+                    swapIndex = j;
+                }
+
+            }
+            int temp = arr[i];
+            arr[i] = arr[swapIndex];
+            arr[swapIndex] = temp;
+        }
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
 
 }
