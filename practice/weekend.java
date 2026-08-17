@@ -7,7 +7,8 @@ class Main {
         // mergeSortArray();
         // checkArray();
         // insertionSort();
-        rotatedBinarySearch();
+        // rotatedBinarySearch();
+        findMedian();
 
     }
 
@@ -274,6 +275,43 @@ class Main {
             }
         }
 
+    }
+
+    // task 9: Given {3, 1, 4, 1, 5, 9, 2, 6}, find the median after sorting (for
+    // even-length arrays, average the two middle elements).
+    public static void findMedian() {
+        int[] arr = { 3, 1, 4, 1, 5, 9, 2, 6 };
+        int n = arr.length;
+
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+
+            }
+            arr[j + 1] = key;
+        }
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        int start = 0;
+        int end = arr.length;
+        if (arr.length % 2 == 0) {
+
+            int mid1 = (start + end) / 2;
+            int mid2 = (start + end) / 2 - 1;
+            System.out.println("Mid 1 is: " + arr[mid1]);
+            System.out.println("Mid 2 is: " + arr[mid2]);
+            double median = (arr[mid1] + arr[mid2]) / 2.0;
+            System.out.println("Mdeian of a even length arr is: " + median);
+
+        } else {
+            int median = (start + end) / 2;
+            System.out.println("Median of a odd sized array is: " + median);
+        }
     }
 
 }
