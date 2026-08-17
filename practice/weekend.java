@@ -6,7 +6,8 @@ class Main {
         // bubbleSortCount();
         // mergeSortArray();
         // checkArray();
-        insertionSort();
+        // insertionSort();
+        rotatedBinarySearch();
 
     }
 
@@ -234,6 +235,44 @@ class Main {
             System.out.print(num + " ");
         }
         System.out.println("Count: " + count);
+
+    }
+
+    // task 8: Given {4, 5, 6, 7, 0, 1, 2} — a sorted array that's been "rotated" —
+    // find the index of 0 using a modified binary search (think about how you'd
+    // decide which half is still properly sorted at each step, since the whole
+    // array isn't sorted anymore, but one half always still is).
+    public static void rotatedBinarySearch() {
+        int[] arr = { 4, 5, 6, 7, 0, 1, 2 };
+        int target = 0;
+        int start = 0;
+        int end = arr.length - 1;
+        int foundIndex = -1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] == target) {
+                foundIndex = mid;
+                System.out.print("found target at index: " + foundIndex);
+                break;
+            }
+
+            if (arr[start] <= arr[mid]) { // left is sorted
+                if (target >= arr[start] && target < arr[mid]) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+
+            } else { // right is sorted
+                if (target > arr[mid] && target <= arr[end]) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+        }
 
     }
 
