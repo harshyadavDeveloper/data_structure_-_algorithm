@@ -310,7 +310,7 @@ class Main {
 
         } else {
             int median = (start + end) / 2;
-            System.out.println("Median of a odd sized array is: " + median);
+            System.out.println("Median of a odd sized array is: " + arr[median]);
         }
     }
 
