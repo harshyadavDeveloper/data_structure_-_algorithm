@@ -3,12 +3,12 @@ class Main {
         // bubbleSort();
         // descSelectionSort();
         // newBinarySearch();
-        // bubbleSortCount();
+        bubbleSortCount();
         // mergeSortArray();
         // checkArray();
         // insertionSort();
         // rotatedBinarySearch();
-        findMedian();
+        // findMedian();
 
     }
 
@@ -87,7 +87,8 @@ class Main {
         }
     }
 
-    // Given a sorted array {1, 3, 5, 7, 9, 11, 13}, use binary search to find the
+    // task 3: Given a sorted array {1, 3, 5, 7, 9, 11, 13}, use binary search to
+    // find the
     // index where 6 would be inserted
     // if it were added to keep the array sorted (it's not present, so return the
     // position just before the next
@@ -99,11 +100,13 @@ class Main {
         int n = arr.length;
         int start = 0;
         int end = n - 1;
+        boolean foundIndex = false;
 
         while (start <= end) {
             int mid = (start + end) / 2;
             if (arr[mid] == target) {
                 System.out.println("Insert Index At: " + mid);
+                foundIndex = true;
                 break;
             } else if (target < arr[mid]) {
                 end = mid - 1;
@@ -113,7 +116,9 @@ class Main {
 
         }
 
-        System.out.println("Insert index at: " + start);
+        if (!foundIndex) {
+            System.out.println("Insert index at: " + start);
+        }
     }
 
     // Task 4: Given {5, 3, 8, 3, 9, 3, 2}, count how many comparisons bubble sort
@@ -128,11 +133,11 @@ class Main {
 
         for (int pass = 0; pass < n - 1; pass++) {
             for (int i = 0; i < n - 1 - pass; i++) {
+                count++;
                 if (arr[i] > arr[i + 1]) {
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
-                    count++;
                 }
 
             }
@@ -313,5 +318,18 @@ class Main {
             System.out.println("Median of a odd sized array is: " + arr[median]);
         }
     }
+
+    // task 10: Reflection task, no code: in one paragraph, explain when you would
+    // choose bubble sort vs. selection sort vs. insertion sort vs. binary search,
+    // if you were told nothing about the data except its size. Base this on what
+    // you've actually observed this week, not general knowledge.
+
+    /// first of all binary search this is not a sorting algo it helps me cut half
+    /// portion of my data based on some condition. bubble sort can be used when i
+    /// need to constantly check neighbouring elements and arrange them in order
+    /// if i want to find the smallest element and place it in the sarting of the
+    /// array then i would prefer selection sort
+    /// if i need a maintain a partly sorted array all the time while sorting itself
+    /// then i would prefer insertion sort
 
 }
