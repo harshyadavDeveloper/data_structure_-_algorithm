@@ -20,29 +20,29 @@ class Main {
         for (int i = 0; i < str.length(); i++) {
             char current = str.charAt(i);
 
-            if (current == '{' || current == '(' || current == '[') {
-                stack.push(current);
-            } else if (current == '}' || current == ')' || current == ']') {
+            if (current == '(' || current == '{' || current == '[') {
+                stack.add(current);
+            } else if (current == ')' || current == '}' || current == ']') {
                 if (stack.isEmpty()) {
                     return false;
                 }
                 char top = stack.peek();
+
                 if (current == ')' && top != '(') {
                     return false;
                 }
                 if (current == '}' && top != '{') {
                     return false;
-
                 }
                 if (current == ']' && top != '[') {
                     return false;
                 }
-
                 stack.pop();
             }
-
         }
+
         return stack.isEmpty();
+
     }
 
 }
