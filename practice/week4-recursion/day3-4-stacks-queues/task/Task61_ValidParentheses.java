@@ -21,7 +21,7 @@ class Main {
             char current = str.charAt(i);
 
             if (current == '(' || current == '{' || current == '[') {
-                stack.add(current);
+                stack.push(current);
             } else if (current == ')' || current == '}' || current == ']') {
                 if (stack.isEmpty()) {
                     return false;
