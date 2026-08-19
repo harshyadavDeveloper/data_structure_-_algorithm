@@ -8,15 +8,15 @@ class Main {
     static int count = 0;
 
     public static void main(String[] args) {
-            fibonacci(10);
-     
+        fibonacci(10);
+
         System.out.println("Count: " + count);
 
     }
 
     public static int fibonacci(int n) {
         count++;
-       
+
         if (n == 0) {
             return 0;
         }
