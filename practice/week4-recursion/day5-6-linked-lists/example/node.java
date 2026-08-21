@@ -1,18 +1,36 @@
+// class Main {
+//     public static void main(String[] args) {
+//         Node first = new Node(10);
+//         Node second = new Node(20);
+//         Node third = new Node(30);
+
+//         System.out.println(first.data);
+//         System.out.println(first.next);
+
+//         first.next = second;
+//         System.out.println(first.next.data);
+//         second.next = third;
+//         // System.out.println(second.next.data);
+//         System.out.println(first.next.next.data);
+
+//     }
+// }
+
 class Main {
     public static void main(String[] args) {
         Node first = new Node(10);
         Node second = new Node(20);
         Node third = new Node(30);
 
-        System.out.println(first.data);
-        System.out.println(first.next);
-
         first.next = second;
-        System.out.println(first.next.data);
         second.next = third;
-        // System.out.println(second.next.data);
-        System.out.println(first.next.next.data);
 
+        Node currNode = first;
+        while (currNode != null) {
+            System.out.print(currNode.data + "->");
+            currNode = currNode.next;
+        }
+        System.out.println("null");
     }
 }
 
