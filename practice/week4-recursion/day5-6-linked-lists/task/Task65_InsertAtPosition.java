@@ -55,6 +55,12 @@ class Main {
             curr = curr.next;
         }
 
+        /// PREVIOUS → NEXT
+
+        // becomes
+
+        // PREVIOUS → NEW → NEXT
+
     }
 }
 
